@@ -1,7 +1,15 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/react';
+import Flickity from 'react-flickity-component';
 
 export default function Dashboard(props) {
+    const flickityOptions = {
+        cellAlign: 'left',
+        contain: true,
+        wrapAround: true,
+        prevNextButtons: false,
+        pageDots: false,
+    };
     return (
         <AuthenticatedLayout
             auth={props.auth}
