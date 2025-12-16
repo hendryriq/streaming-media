@@ -1,3 +1,5 @@
+import { prototype } from "postcss/lib/previous-map"
+
 export default function Sidebar(){
     return(
         <aside className="fixed z-50 w-[300px] h-full">
@@ -47,7 +49,7 @@ export default function Sidebar(){
                     </div>
                     <div>
                         <div className="text-gray-1 side-link mb-4">Others</div>
-                        <a href="pricing.html" className="side-link">
+                        <a href={route('prototype.subscriptionPlan')} className="side-link">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fillRule="evenodd" clipRule="evenodd"
