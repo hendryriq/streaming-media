@@ -8,13 +8,13 @@ use App\Models\Movie;
 
 class DashboardController extends Controller{
     public function index(){
-        return inertia('User/Dashboard/Index');
-        // $featuredMovies = Movie::whereIsFeatured(true)->get();
-        // $movies = movie::all();
+        // return inertia('User/Dashboard/Index');
+        $featuredMovies = Movie::whereIsFeatured(true)->get();
+        $movies = movie::all();
 
-        // return inertia('User/Dashboard/Index', [
-        //     'featuredMovies' => $featuredMovies,
-        //     'movies' => $movies,
-        // ]);
+        return inertia('User/Dashboard/Index', [
+            'featuredMovies' => $featuredMovies,
+            'movies' => $movies,
+        ]);
     }
 }
