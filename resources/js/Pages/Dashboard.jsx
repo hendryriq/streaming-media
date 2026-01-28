@@ -1,6 +1,7 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head } from '@inertiajs/react';
-
+import Flickity from 'react-flickity-component';
+import FeaturedMovie from '@/Components/FeaturedMovie';
 export default function Dashboard(props) {
     return (
         <AuthenticatedLayout
