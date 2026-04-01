@@ -34,7 +34,7 @@ class HandleInertiaRequests extends Middleware
     
     private function activePlan(){
         $activePlan = Auth::user() ? Auth::user()->LastActiveUserSubscription : null;
-        if(!$activePlan){
+        if(!$activePlan || !$activePlan->subscriptionPlan){
             return null;
         }
 
